@@ -34,6 +34,18 @@ void add_female(struct For_Female **head, char sex[], float hemoglobinLevel, flo
         (*head)->leukocytes = leukocytes;
         (*head)->thrombocytes = thrombocytes;
         (*head)->id = id;
+
+        printf("Check result in result_female.txt\n");
+
+        FILE *res = fopen("result_female.txt", "a");
+
+        fprintf(res, "Added element id: %d\n", id);
+        fprintf(res, "Hemoglobin Level: %f\n", hemoglobinLevel);
+        fprintf(res, "Erythrocytes: %f\n", erythrocytes);
+        fprintf(res, "Leukocytes: %f\n", leukocytes);
+        fprintf(res, "Thrombocytes: %f\n\n\n", thrombocytes);
+        fclose(res);
+
         return;
     }
     else
@@ -62,6 +74,17 @@ void add_female(struct For_Female **head, char sex[], float hemoglobinLevel, flo
             new->next = 0;
             copy->next = new;
             head = new_head;
+
+            printf("Check result in result_female.txt\n");
+
+            FILE *res = fopen("result_female.txt", "a");
+
+            fprintf(res, "Added element id: %d\n", id);
+            fprintf(res, "Hemoglobin Level: %f\n", hemoglobinLevel);
+            fprintf(res, "Erythrocytes: %f\n", erythrocytes);
+            fprintf(res, "Leukocytes: %f\n", leukocytes);
+            fprintf(res, "Thrombocytes: %f\n\n\n", thrombocytes);
+            fclose(res);
         }
         return;
     }
@@ -79,7 +102,12 @@ void get_female(struct For_Female **head, int id)
     }
     if (copy != NULL)
     {
-        printf("The position of id %d in the female list is: %d\n", id, i);
+        printf("Check result in result_female.txt\n");
+
+        FILE *res = fopen("result_female.txt", "a");
+
+        fprintf(res, "The position of id %d in the female list is: %d\n\n", id, i);
+        fclose(res);
     }
     else
     {
@@ -100,56 +128,98 @@ void analize_female(struct For_Female **head, int id)
     }
     if (copy != NULL)
     {
+        printf("Check result in result_female.txt\n");
+
+        FILE *res = fopen("result_female.txt", "a");
+
+        fprintf(res, "Analize for id: %d\n", id);
+        fclose(res);
         if (copy->hemoglobinLevel < 12)
         {
-            printf("Hemoglobin level is low\n");
+            FILE *res = fopen("result_female.txt", "a");
+
+            fprintf(res, "Hemoglobin level is low\n");
+            fclose(res);
         }
         else if (copy->hemoglobinLevel <= 16)
         {
-            printf("Hemoglobin level is normal\n");
+            FILE *res = fopen("result_female.txt", "a");
+
+            fprintf(res, "Hemoglobin level is normal\n");
+            fclose(res);
         }
         else
         {
-            printf("Hemoglobin level is high\n");
+            FILE *res = fopen("result_female.txt", "a");
+
+            fprintf(res, "Hemoglobin level is high\n");
+            fclose(res);
         }
 
         if (copy->erythrocytes < 3.8)
         {
-            printf("The number of erythrocytes is low\n");
+            FILE *res = fopen("result_female.txt", "a");
+
+            fprintf(res, "The number of erythrocytes is low\n");
+            fclose(res);
         }
         else if (copy->erythrocytes <= 5.2)
         {
-            printf("The number of erythrocytes is normal\n");
+            FILE *res = fopen("result_female.txt", "a");
+
+            fprintf(res, "The number of erythrocytes is normal\n");
+            fclose(res);
         }
         else
         {
-            printf("The number of erythrocytes is high\n");
+            FILE *res = fopen("result_female.txt", "a");
+
+            fprintf(res, "The number of erythrocytes is high\n");
+            fclose(res);
         }
 
         if (copy->leukocytes < 4500)
         {
-            printf("The number of leukocytes is low\n");
+            FILE *res = fopen("result_female.txt", "a");
+
+            fprintf(res, "The number of leukocytes is low\n");
+            fclose(res);
         }
         else if (copy->leukocytes <= 11000)
         {
-            printf("The number of leukocytes is normal\n");
+            FILE *res = fopen("result_female.txt", "a");
+
+            fprintf(res, "The number of leukocytes is normal\n");
+            fclose(res);
         }
         else
         {
-            printf("The number of leukocytes is high\n");
+            FILE *res = fopen("result_female.txt", "a");
+
+            fprintf(res, "The number of leukocytes is high\n");
+            fclose(res);
         }
 
         if (copy->thrombocytes < 157000)
         {
-            printf("The number of thrombocytes is low\n");
+            FILE *res = fopen("result_female.txt", "a");
+
+            fprintf(res, "The number of thrombocytes is low\n\n");
+            fclose(res);
         }
         else if (copy->thrombocytes <= 371000)
         {
-            printf("The number of thrombocytes is normal\n");
+            FILE *res = fopen("result_female.txt", "a");
+
+            fprintf(res, "The number of thrombocytes is normal\n\n");
+            fclose(res);
         }
         else
         {
-            printf("The number of thrombocytes is high\n");
+            FILE *res = fopen("result_female.txt", "a");
+
+            fprintf(res, "The number of thrombocytes is high\n\n");
+            fclose(res);
         }
     }
     else
