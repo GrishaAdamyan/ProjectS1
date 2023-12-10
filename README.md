@@ -1,7 +1,7 @@
 # ProjectS1 - Digital Manufacturing
 Description:
 
-This project is a blood property analyzer that categorizes and analyzes blood properties based on gender groups. It includes functionalities to add, get, and analyze blood data for men and women, storing the results in separate files for easy reference.
+This project is a blood property analyzer designed as part of a manufacturing process for blood analysis equipment. It categorizes and analyzes blood properties based on gender groups. The program includes functionalities to add, get, and analyze blood data for men and women, storing the results in separate files for easy reference.
 
 Usage:
 
